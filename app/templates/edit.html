@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/edit/{{oscar.id}}" method="post">
+
+    <div class="row">
+        <div class="col">
+            <label for="fldYear">Year Awarded</label>
+            <input id="fldYear" type="text" class="form-control" placeholder="Year Awarded" name="fldYear" value="{{oscar.fldYear}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldAge">Age Awarded</label>
+            <input id="fldAge" type="text" class="form-control" placeholder="Age Awarded" name="fldAge" value="{{oscar.fldAge}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldName">Actor Name</label>
+            <input id="fldName" type="text" class="form-control" placeholder="Actor Name" name="fldName" value="{{oscar.fldName}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="fldMovie">Movie Title</label>
+            <input id="fldMovie" type="text" class="form-control" placeholder="Movie Title" name="fldMovie" value="{{oscar.fldMovie}}">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">SAVE OSCAR AWARD</button>
+
+</form>
+{% endblock %}

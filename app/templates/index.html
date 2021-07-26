@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table class="table table-striped table-hover table-bordered table-dark">
+
+    <thead class="thead-light">
+    <tr>
+        <th scope="col" class="text-primary">Year</th>
+        <th scope="col" class="text-primary">Age</th>
+        <th scope="col" class="text-primary">Name</th>
+        <th scope="col" class="text-primary">Movie</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for oscar in oscarAwards %}
+    <tr>
+        <td><a href="view/{{oscar.id}}">{{ oscar.fldYear }}</a></td>
+        <td>{{ oscar.fldAge }}</td>
+        <td>{{ oscar.fldName }}</td>
+        <td>{{ oscar.fldMovie }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
